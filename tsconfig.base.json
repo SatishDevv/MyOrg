@@ -14,7 +14,11 @@
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
-    "paths": {}
+    "paths": {
+      "@myorg/form-builder-lib": ["modules/src/index.ts"],
+      "@myorg/form-builder-library": ["form-builder-library/src/index.ts"],
+      "@myorg/formBuilder": ["formBuilder/src/index.ts"]
+    }
   },
   "exclude": ["node_modules", "tmp"]
 }

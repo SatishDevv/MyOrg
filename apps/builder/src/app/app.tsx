@@ -1,6 +1,7 @@
 import styled from 'styled-components';
-
 import NxWelcome from './nx-welcome';
+import { Route, Routes, Link } from 'react-router-dom';
+import { FormBuilderLibrary } from '@myorg/form-builder-library';
 
 const StyledApp = styled.div`
   // Your style here
@@ -9,7 +10,17 @@ const StyledApp = styled.div`
 export function App() {
   return (
     <StyledApp>
-      <NxWelcome title="builder" />
+      <Routes>
+        <Route
+          path="/"
+          element={
+            <div>
+              <Link to="/page-2"><NxWelcome title="builder" /></Link>
+            </div>
+          }
+        />
+        <Route path="/form-builder-library" element={<FormBuilderLibrary />} />
+      </Routes>
     </StyledApp>
   );
 }
